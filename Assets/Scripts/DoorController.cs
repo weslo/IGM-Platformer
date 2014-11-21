@@ -34,7 +34,8 @@ public class DoorController : MonoBehaviour {
 			if (player.pickups >= pickupsRequired)
 			{
 				open = true;
-				Application.LoadLevel (Application.loadedLevel);
+				GameScreen screen = transform.parent.GetComponent<GameScreen> ();
+				screen.LoadOtherScreen (1);
 			}
 		}
 	}

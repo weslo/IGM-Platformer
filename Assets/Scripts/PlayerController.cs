@@ -149,7 +149,8 @@ public class PlayerController : MonoBehaviour {
 
 		if (hp == 0) {
 			Destroy(gameObject); // check for death condition
-			Application.LoadLevel(Application.loadedLevel);
+			GameScreen screen = transform.parent.GetComponent<GameScreen>();
+			screen.LoadOtherScreen(2);
 		}
 		
 		//animator.Play ("player_hurt");
