@@ -145,6 +145,7 @@ public class PlayerController : MonoBehaviour {
 
 	// Hurt the player.
 	public void Hurt () {
+		animator.Play("player_hurt");
 		hp--; // decrement health
 
 		if (hp == 0) {
